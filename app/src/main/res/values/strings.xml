@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KotlinDevKeyboard</string>
+
+    <string name="ime_name">Dev Keyboard</string>
+    <string name="ime_settings_label">Dev Keyboard Settings</string>
+
+    <!-- Subtype label: %s is autofill by the system with the locale name -->
+    <string name="label_subtype_generic">%s</string>
+    <string name="subtype_en">English (US)</string>
+
+    <!-- Snippet category names -->
+    <string name="snippet_category_operator">Operators</string>
+    <string name="snippet_category_control">Control Flow</string>
+    <string name="snippet_category_declaration">Declarations</string>
+    <string name="snippet_category_modifier">Modifiers</string>
+    <string name="snippet_category_scope">Scope Functions</string>
+    <string name="snippet_category_collection">Collections</string>
+    <string name="snippet_category_null_safety">Null Safety / Type Checks</string>
+    <string name="snippet_category_coroutine">Coroutines</string>
+    <string name="snippet_category_compose">Jetpack Compose</string>
+    <string name="snippet_category_string">String Operations</string>
+    <string name="snippet_category_convert">Type Conversions</string>
+    <string name="snippet_category_exception">Exception Handling</string>
+    <string name="snippet_category_output">Output</string>
+    <string name="snippet_category_custom">Custom</string>
+
+    <!-- Settings screen: section titles -->
+    <string name="settings_title">Dev Keyboard Settings</string>
+    <string name="settings_section_theme">Theme</string>
+    <string name="settings_section_feedback">Feedback</string>
+    <string name="settings_section_snippet">Snippets</string>
+
+    <!-- Settings screen: IME activation -->
+    <string name="settings_enable_ime">① Enable keyboard</string>
+    <string name="settings_select_ime">② Select keyboard</string>
+
+    <!-- Settings screen: theme selection -->
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_system">System</string>
+
+    <!-- Settings screen: dynamic color -->
+    <string name="settings_dynamic_color_title">Dynamic Color</string>
+    <string name="settings_dynamic_color_desc">Apply wallpaper colors to the keyboard (Android 12+)</string>
+
+    <!-- Settings screen: feedback -->
+    <string name="settings_haptic_title">Haptic Feedback</string>
+    <string name="settings_haptic_desc">Vibrate on key press</string>
+    <string name="settings_popup_title">Key Popup</string>
+    <string name="settings_popup_desc">Show enlarged key while flicking</string>
+
+    <!-- Settings screen: snippets -->
+    <string name="settings_snippet_create_category">+ Create category</string>
+    <string name="settings_snippet_hint">Toggle default snippets on/off. Custom snippets can be added or removed.</string>
+    <string name="settings_snippet_empty">No snippets</string>
+
+    <!-- Category header actions -->
+    <string name="settings_category_add">+</string>
+    <string name="settings_category_edit">Edit</string>
+    <string name="settings_category_close">Close</string>
+    <string name="settings_category_delete">Delete</string>
+
+    <!-- Dialog: create category -->
+    <string name="dialog_create_category_title">Create Category</string>
+    <string name="dialog_create_category_label">Category name</string>
+    <string name="dialog_create_category_confirm">Create</string>
+
+    <!-- Dialog: add snippet -->
+    <string name="dialog_add_snippet_title">Add keyword to "%s"</string>
+    <string name="dialog_add_snippet_label">Keyword</string>
+    <string name="dialog_add_snippet_placeholder">e.g. myFunction</string>
+    <string name="dialog_add_snippet_error">Only ASCII characters are allowed</string>
+    <string name="dialog_add_snippet_confirm">Add</string>
+    <string name="dialog_add_snippet_insert_label">Insert text</string>
+    <string name="dialog_add_snippet_insert_placeholder">Leave empty to use keyword</string>
+
+    <!-- Dialog: delete category -->
+    <string name="dialog_delete_category_title">Delete Category</string>
+    <string name="dialog_delete_category_message">Delete "%s" and all its keywords?</string>
+
+    <!-- Dialog: delete snippet -->
+    <string name="dialog_delete_snippet_title">Delete Keyword</string>
+    <string name="dialog_delete_snippet_message">Delete "%s"?</string>
+
+    <!-- SpaceKeyButton accessibility -->
+    <string name="space_key_content_description">Space. Swipe to move cursor.</string>
+
+    <!-- FlickKeyButton accessibility: %s is replaced with the flick target character -->
+    <string name="flick_direction_up">, flick up for %s</string>
+    <string name="flick_direction_down">, flick down for %s</string>
+    <string name="flick_direction_left">, flick left for %s</string>
+    <string name="flick_direction_right">, flick right for %s</string>
+
+    <!-- SnippetToolbar -->
+    <string name="toolbar_no_candidates">No matches</string>
+    <string name="toolbar_dismiss">✕</string>
+
+    <!-- Dialog common -->
+    <string name="dialog_confirm_delete">Delete</string>
+    <string name="dialog_cancel">Cancel</string>
+</resources>
