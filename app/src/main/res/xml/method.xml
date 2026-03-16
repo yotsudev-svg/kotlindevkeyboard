@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<input-method xmlns:android="http://schemas.android.com/apk/res/android"
+    android:settingsActivity="com.blogspot.yotsudev.kotlindevkeyboard.settings.DevKeyboardSettingsActivity"
+    android:icon="@mipmap/ic_launcher"
+    android:supportsSwitchingToNextInputMethod="true">
+
+    <!-- %s is resolved by the system from languageTag -->
+    <subtype
+        android:label="@string/label_subtype_generic"
+        android:languageTag="en-US"
+        android:imeSubtypeMode="keyboard"/>
+</input-method>

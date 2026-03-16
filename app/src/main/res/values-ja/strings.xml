@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KotlinDevKeyboard</string>
+
+    <string name="ime_name">Dev Keyboard</string>
+    <string name="ime_settings_label">Dev Keyboard Settings</string>
+
+    <!-- サブタイプ表示名：%s にするとシステムがロケール名を自動補完する -->
+    <string name="label_subtype_generic">%s</string>
+    <string name="subtype_en">English (US)</string>
+
+    <!-- スニペットカテゴリ表示名 -->
+    <string name="snippet_category_operator">演算子</string>
+    <string name="snippet_category_control">制御構文</string>
+    <string name="snippet_category_declaration">宣言</string>
+    <string name="snippet_category_modifier">修飾子</string>
+    <string name="snippet_category_scope">スコープ関数</string>
+    <string name="snippet_category_collection">コレクション操作</string>
+    <string name="snippet_category_null_safety">null安全 / 型チェック</string>
+    <string name="snippet_category_coroutine">コルーチン</string>
+    <string name="snippet_category_compose">Jetpack Compose</string>
+    <string name="snippet_category_string">文字列操作</string>
+    <string name="snippet_category_convert">型変換</string>
+    <string name="snippet_category_exception">例外処理</string>
+    <string name="snippet_category_output">出力</string>
+    <string name="snippet_category_custom">カスタム</string>
+
+    <!-- 設定画面：セクションタイトル -->
+    <string name="settings_title">Dev Keyboard 設定</string>
+    <string name="settings_section_theme">テーマ</string>
+    <string name="settings_section_feedback">フィードバック</string>
+    <string name="settings_section_snippet">スニペット</string>
+
+    <!-- 設定画面：IME有効化 -->
+    <string name="settings_enable_ime">① キーボードを有効化する</string>
+    <string name="settings_select_ime">② キーボードを選択する</string>
+
+    <!-- 設定画面：テーマ選択 -->
+    <string name="settings_theme_dark">ダーク</string>
+    <string name="settings_theme_light">ライト</string>
+    <string name="settings_theme_system">システム</string>
+
+    <!-- 設定画面：ダイナミックカラー -->
+    <string name="settings_dynamic_color_title">ダイナミックカラー</string>
+    <string name="settings_dynamic_color_desc">壁紙の色をキーボードに反映（Android 12以降）</string>
+
+    <!-- 設定画面：フィードバック -->
+    <string name="settings_haptic_title">触覚フィードバック</string>
+    <string name="settings_haptic_desc">キーを押したときに振動でフィードバック</string>
+    <string name="settings_popup_title">キーポップアップ</string>
+    <string name="settings_popup_desc">フリック中にキーを拡大表示</string>
+
+    <!-- 設定画面：スニペット -->
+    <string name="settings_snippet_create_category">＋ カテゴリを作成</string>
+    <string name="settings_snippet_hint">デフォルトはスイッチで表示/非表示。カスタムは追加・削除できます。</string>
+    <string name="settings_snippet_empty">スニペットがありません</string>
+
+    <!-- カテゴリヘッダー操作 -->
+    <string name="settings_category_add">＋</string>
+    <string name="settings_category_edit">編集</string>
+    <string name="settings_category_close">閉じる</string>
+    <string name="settings_category_delete">削除</string>
+
+    <!-- ダイアログ：カテゴリ作成 -->
+    <string name="dialog_create_category_title">カテゴリを作成</string>
+    <string name="dialog_create_category_label">カテゴリ名</string>
+    <string name="dialog_create_category_confirm">作成</string>
+
+    <!-- ダイアログ：スニペット追加 -->
+    <string name="dialog_add_snippet_title">「%s」にキーワードを追加</string>
+    <string name="dialog_add_snippet_label">キーワード</string>
+    <string name="dialog_add_snippet_placeholder">例: myFunction</string>
+    <string name="dialog_add_snippet_error">英数字・記号のみ入力できます</string>
+    <string name="dialog_add_snippet_confirm">追加</string>
+    <string name="dialog_add_snippet_insert_label">挿入テキスト</string>
+    <string name="dialog_add_snippet_insert_placeholder">空欄の場合はキーワードを使用</string>
+
+    <!-- ダイアログ：カテゴリ削除 -->
+    <string name="dialog_delete_category_title">カテゴリを削除</string>
+    <string name="dialog_delete_category_message">「%s」とその中のキーワードをすべて削除しますか？</string>
+
+    <!-- ダイアログ：スニペット削除 -->
+    <string name="dialog_delete_snippet_title">キーワードを削除</string>
+    <string name="dialog_delete_snippet_message">「%s」を削除しますか？</string>
+
+    <!-- SpaceKeyButton アクセシビリティ -->
+    <string name="space_key_content_description">スペース。スワイプでカーソル移動</string>
+
+    <!-- FlickKeyButton アクセシビリティ：%s にフリック先の文字が入る -->
+    <string name="flick_direction_up">、上フリックで%s</string>
+    <string name="flick_direction_down">、下フリックで%s</string>
+    <string name="flick_direction_left">、左フリックで%s</string>
+    <string name="flick_direction_right">、右フリックで%s</string>
+
+    <!-- SnippetToolbar -->
+    <string name="toolbar_no_candidates">候補なし</string>
+    <string name="toolbar_dismiss">✕</string>
+
+    <!-- ダイアログ共通 -->
+    <string name="dialog_confirm_delete">削除</string>
+    <string name="dialog_cancel">キャンセル</string>
+</resources>
