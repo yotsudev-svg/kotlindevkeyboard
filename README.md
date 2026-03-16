@@ -87,19 +87,6 @@ The SNP key provides quick access to Kotlin-specific templates. The snippet list
 
 ---
 
-## ⚙️ Setup — Build & Install (from source)
-1.  **Clone the repo**:
-    ```bash
-    git clone [https://github.com/](https://github.com/)<your-username>/KotlinDevKeyboard.git
-    ```
-2.  **Open** the project in Android Studio.
-3.  **Build & run** on a physical device.
-4.  **Enable and select the keyboard**:
-    * Settings → System → Languages & input → On-screen keyboard → Manage on-screen keyboards → enable **KotlinDevKeyboard**.
-    * Then tap the keyboard icon in the navigation bar and select **KotlinDevKeyboard**.
-
----
-
 ## 🔒 Privacy & Permissions
 * **Permissions**: This app requires `BIND_INPUT_METHOD` to operate as a keyboard.
 * **Data handling**: The app does **not** collect or transmit typed input off-device. Only non-sensitive settings (theme, snippet prefs) are stored locally in SharedPreferences.
