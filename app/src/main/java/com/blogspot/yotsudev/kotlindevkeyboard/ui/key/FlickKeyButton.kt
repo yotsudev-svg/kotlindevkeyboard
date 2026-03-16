@@ -229,8 +229,9 @@ fun FlickKeyButton(
 @Composable
 fun FlickSubLabels(flickKey: FlickKey, contentColor: Color) {
     Box(modifier = Modifier.fillMaxSize().padding(2.dp)) {
-        flickKey.up?.let {
-            Text(it, color = contentColor, fontSize = KEY_FONT_SIZE_SUB,
+        val showUp = flickKey.up != null && flickKey.up != flickKey.longPress
+        if (showUp) {
+            Text(flickKey.up!!, color = contentColor, fontSize = KEY_FONT_SIZE_SUB,
                 modifier = Modifier.align(Alignment.TopCenter))
         }
         flickKey.down?.let {
@@ -245,7 +246,6 @@ fun FlickSubLabels(flickKey: FlickKey, contentColor: Color) {
             Text(it, color = contentColor, fontSize = KEY_FONT_SIZE_SUB,
                 modifier = Modifier.align(Alignment.CenterEnd))
         }
-        // Long-press label shown bold at top-right
         flickKey.longPress?.let {
             Text(
                 text       = it,

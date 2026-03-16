@@ -32,7 +32,7 @@ fun KeyboardScreen(
     onTab: () -> Unit,
     onSnippetSelect: (deleteCount: Int, insertText: String) -> Unit,
 ) {
-    val context   = LocalContext.current
+    val context    = LocalContext.current
     val systemDark = isSystemInDarkTheme()
 
     val isDark = when (settings.themeMode) {
@@ -57,42 +57,39 @@ fun KeyboardScreen(
 
     val showNumpad = isNumeric || isNumpadMode
 
+    // Commits text to the editor; also updates filterQuery in toolbar mode for snippet filtering.
+    // Typing continues normally and a snippet can optionally be selected to replace the prefix.
     fun input(text: String) {
         val actual = when (shiftState) {
             ShiftState.OFF  -> text
-            // Single-shot: revert to OFF after one character
             ShiftState.ONCE -> { shiftState = ShiftState.OFF; text.uppercase() }
             ShiftState.LOCK -> text.uppercase()
         }
-        if (isToolbarMode) {
-            filterQuery += actual
-        } else {
-            onTextInput(actual)
-        }
+        if (isToolbarMode) filterQuery += actual
+        onTextInput(actual)
     }
 
-    // Inserts bracket pair and moves cursor inside
+    // Bypasses input(): pairs are shift-invariant and must not accumulate into filterQuery.
     fun inputPair(open: String, close: String) {
         onTextInput("$open$close")
         onMoveCursorLeft()
     }
 
+    // Keeps filterQuery in sync with the editor by trimming one char in toolbar mode.
     val handleBackspace: () -> Unit = {
-        if (isToolbarMode) {
-            if (filterQuery.isNotEmpty()) filterQuery = filterQuery.dropLast(1)
-        } else {
-            onBackspace()
-        }
+        if (isToolbarMode && filterQuery.isNotEmpty()) filterQuery = filterQuery.dropLast(1)
+        onBackspace()
     }
 
+    // Replaces the typed prefix already in the editor with the chosen snippet.
     fun selectSnippet(snippet: Snippet) {
-        onSnippetSelect(0, snippet.insert)
+        onSnippetSelect(filterQuery.length, snippet.insert)
         isToolbarMode = false
         filterQuery   = ""
     }
 
     CompositionLocalProvider(
-        LocalKeyboardSettings  provides settings,
+        LocalKeyboardSettings   provides settings,
         LocalKeyboardAppearance provides appearance,
     ) {
         MaterialTheme(colorScheme = colorScheme) {
@@ -112,18 +109,16 @@ fun KeyboardScreen(
                             filterQuery     = filterQuery,
                             snippets        = snippets,
                             onSnippetSelect = { selectSnippet(it) },
-                            onDismiss = {
-                                val pending = filterQuery
+                            onDismiss       = {
+                                // Text is already in the editor; just close the toolbar
                                 isToolbarMode = false
                                 filterQuery   = ""
-                                if (pending.isNotEmpty()) onTextInput(pending)
                             }
                         )
                     } else {
                         SymbolRowSection(
                             onInput        = { input(it) },
                             onInputPair    = { o, c -> inputPair(o, c) },
-                            // SNP key disabled in password fields
                             onSpecialClick = { if (!isPassword) isToolbarMode = true },
                             onEsc          = onEsc,
                         )
